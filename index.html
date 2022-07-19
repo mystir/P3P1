@@ -5,11 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Trispace:100,200,300,regular,500,600,700,800"
+        rel="stylesheet" />
     <title>Phase 3 Project 1</title>
 </head>
 
 <body>
-    <h1>start</h1>
+    <form onsubmit="return validateForm(this);" novalidate>
+        <label for="key" class="input">API Key:</label>
+        <input type="text" id="key" name="key" required><br>
+        <label for="title" class="input">Title of Movie:</label>
+        <input type="text" id="title" name="title" required><br>
+        <label for="year" class="input">Year(Optional):</label>
+        <input type="number" min="1929" max="2022" step="1" id="year" name="year"><br>
+        <label for="plot" class="input">Plot:</label>
+        <select name="plot" id="plot" required>
+            <option value="short">short</option>
+            <option value="long">full</option>
+        </select><br><br>
+
+        <button type="submit" id="search">Search</button>
+    </form>
+
+    <div class="results">
+        <h2>Form Data</h2>
+        <pre></pre>
+        <img>
+    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
